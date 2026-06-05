@@ -571,16 +571,18 @@
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                     <div class="text-center">
                                         <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-rose-50">
-                                            <!-- Bride with veil (filled) -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" class="w-8 h-10 text-rose-gold" fill="currentColor">
-                                                <!-- veil left -->
-                                                <path d="M32 8 C20 6 10 12 10 22 L18 26 C19 18 25 14 32 14Z" opacity="0.55"/>
-                                                <!-- veil right -->
-                                                <path d="M32 8 C44 6 54 12 54 22 L46 26 C45 18 39 14 32 14Z" opacity="0.55"/>
+                                            <!-- Bride silhouette with veil (outline) -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-rose-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                                <!-- veil arc over head -->
+                                                <path d="M7 11 C7 5.5 17 5.5 17 11"/>
+                                                <!-- veil left drape -->
+                                                <path d="M7 11 L5.5 19"/>
+                                                <!-- veil right drape -->
+                                                <path d="M17 11 L18.5 19"/>
                                                 <!-- head -->
-                                                <circle cx="32" cy="30" r="14"/>
-                                                <!-- neck + shoulders -->
-                                                <path d="M22 80 C22 60 27 52 32 52 C37 52 42 60 42 80Z"/>
+                                                <circle cx="12" cy="12" r="3.5"/>
+                                                <!-- shoulders -->
+                                                <path d="M7.5 22 C7.5 18.5 16.5 18.5 16.5 22"/>
                                             </svg>
                                         </div>
                                         <h3 class="font-semibold text-lg text-charcoal mb-3">Bridal Makeup</h3>
@@ -588,14 +590,14 @@
                                     </div>
                                     <div class="text-center">
                                         <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-rose-50">
-                                            <!-- Wedding dress (filled) -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" class="w-8 h-10 text-rose-gold" fill="currentColor">
-                                                <!-- bodice with sweetheart neckline -->
-                                                <path d="M22 4 C22 4 26 12 32 12 C38 12 42 4 42 4 L44 30 L20 30 Z"/>
+                                            <!-- Wedding dress (outline) -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-rose-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                                <!-- sweetheart neckline -->
+                                                <path d="M9.5 3 C9.5 4.5 12 6 12 6 C12 6 14.5 4.5 14.5 3"/>
+                                                <!-- bodice -->
+                                                <path d="M9.5 3 L8.5 11 L15.5 11 L14.5 3"/>
                                                 <!-- skirt flare -->
-                                                <path d="M20 30 C14 44 6 60 2 78 L62 78 C58 60 50 44 44 30 Z"/>
-                                                <!-- small bow at waist -->
-                                                <path d="M28 30 L32 36 L36 30 Z" opacity="0.6"/>
+                                                <path d="M8.5 11 C6.5 14.5 3.5 18.5 2 22 L22 22 C20.5 18.5 17.5 14.5 15.5 11"/>
                                             </svg>
                                         </div>
                                         <h3 class="font-semibold text-lg text-charcoal mb-3">Bridesmaids</h3>
@@ -603,11 +605,11 @@
                                     </div>
                                     <div class="text-center">
                                         <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-rose-50">
-                                            <!-- Champagne glasses / celebration -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-rose-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 3 L6 10 C6 13 10 14 10 14 L10 19 M10 19 L7 21 M10 19 L13 21"/>
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 3 L18 10 C18 13 14 14 14 14 L14 19"/>
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 10 L18 10"/>
+                                            <!-- Champagne glasses (outline) -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-rose-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M8 3 L6 10 C6 13 10 14 10 14 L10 19 M10 19 L7 21 M10 19 L13 21"/>
+                                                <path d="M16 3 L18 10 C18 13 14 14 14 14 L14 19"/>
+                                                <path d="M6 10 L18 10"/>
                                             </svg>
                                         </div>
                                         <h3 class="font-semibold text-lg text-charcoal mb-3">Special Events</h3>
@@ -615,11 +617,11 @@
                                     </div>
                                     <div class="text-center">
                                         <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-rose-50">
-                                            <!-- Calendar / consultation booking -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-rose-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
-                                                <rect x="3" y="4" width="18" height="18" rx="2" stroke-linecap="round"/>
-                                                <path stroke-linecap="round" d="M16 2v4M8 2v4M3 10h18"/>
-                                                <path stroke-linecap="round" d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                                            <!-- Calendar (outline) -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-rose-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                                <path d="M16 2v4M8 2v4M3 10h18"/>
+                                                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
                                             </svg>
                                         </div>
                                         <h3 class="font-semibold text-lg text-charcoal mb-3">Consultations</h3>
