@@ -1,0 +1,16 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+*.log
+*.pem
+.DS_Store
+.idea
+.vscode
+*.swp
+*.swo
+*~
+cloudflared.exe
+Family_Pic.png
+Family_photo_horses.png

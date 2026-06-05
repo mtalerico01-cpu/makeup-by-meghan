@@ -1,0 +1,81 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8c47a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9a86d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Elegant rose/peony flower -->
+  <!-- Outer petals -->
+  <ellipse cx="120" cy="80" rx="18" ry="26" fill="#d4a8a8" opacity="0.9" transform="rotate(0 120 80)"/>
+  <ellipse cx="145" cy="92" rx="18" ry="26" fill="#c9968f" opacity="0.85" transform="rotate(45 145 92)"/>
+  <ellipse cx="155" cy="117" rx="18" ry="26" fill="#d4a8a8" opacity="0.9" transform="rotate(90 155 117)"/>
+  <ellipse cx="145" cy="142" rx="18" ry="26" fill="#c9968f" opacity="0.85" transform="rotate(135 145 142)"/>
+  <ellipse cx="120" cy="154" rx="18" ry="26" fill="#d4a8a8" opacity="0.9" transform="rotate(180 120 154)"/>
+  <ellipse cx="95" cy="142" rx="18" ry="26" fill="#c9968f" opacity="0.85" transform="rotate(225 95 142)"/>
+  <ellipse cx="85" cy="117" rx="18" ry="26" fill="#d4a8a8" opacity="0.9" transform="rotate(270 85 117)"/>
+  <ellipse cx="95" cy="92" rx="18" ry="26" fill="#c9968f" opacity="0.85" transform="rotate(315 95 92)"/>
+  
+  <!-- Middle layer petals -->
+  <ellipse cx="120" cy="95" rx="14" ry="20" fill="#d9b5b5" opacity="0.95" transform="rotate(22.5 120 95)"/>
+  <ellipse cx="140" cy="105" rx="14" ry="20" fill="#d4a8a8" opacity="0.9" transform="rotate(67.5 140 105)"/>
+  <ellipse cx="145" cy="125" rx="14" ry="20" fill="#d9b5b5" opacity="0.95" transform="rotate(112.5 145 125)"/>
+  <ellipse cx="130" cy="145" rx="14" ry="20" fill="#d4a8a8" opacity="0.9" transform="rotate(157.5 130 145)"/>
+  <ellipse cx="110" cy="150" rx="14" ry="20" fill="#d9b5b5" opacity="0.95" transform="rotate(202.5 110 150)"/>
+  <ellipse cx="90" cy="135" rx="14" ry="20" fill="#d4a8a8" opacity="0.9" transform="rotate(247.5 90 135)"/>
+  <ellipse cx="85" cy="115" rx="14" ry="20" fill="#d9b5b5" opacity="0.95" transform="rotate(292.5 85 115)"/>
+  <ellipse cx="100" cy="100" rx="14" ry="20" fill="#d4a8a8" opacity="0.9" transform="rotate(337.5 100 100)"/>
+  
+  <!-- Inner petals -->
+  <ellipse cx="120" cy="108" rx="11" ry="15" fill="#e8ccc4" opacity="1" transform="rotate(11.25 120 108)"/>
+  <ellipse cx="135" cy="115" rx="11" ry="15" fill="#ddbab0" opacity="0.98" transform="rotate(33.75 135 115)"/>
+  <ellipse cx="142" cy="130" rx="11" ry="15" fill="#e8ccc4" opacity="1" transform="rotate(56.25 142 130)"/>
+  <ellipse cx="138" cy="145" rx="11" ry="15" fill="#ddbab0" opacity="0.98" transform="rotate(78.75 138 145)"/>
+  <ellipse cx="120" cy="150" rx="11" ry="15" fill="#e8ccc4" opacity="1" transform="rotate(101.25 120 150)"/>
+  <ellipse cx="102" cy="145" rx="11" ry="15" fill="#ddbab0" opacity="0.98" transform="rotate(123.75 102 145)"/>
+  <ellipse cx="98" cy="130" rx="11" ry="15" fill="#e8ccc4" opacity="1" transform="rotate(146.25 98 130)"/>
+  <ellipse cx="105" cy="115" rx="11" ry="15" fill="#ddbab0" opacity="0.98" transform="rotate(168.75 105 115)"/>
+  
+  <!-- Rose center -->
+  <circle cx="120" cy="120" r="12" fill="#d4a8a8" opacity="0.95"/>
+  <circle cx="120" cy="120" r="8" fill="#c9968f"/>
+  <circle cx="120" cy="120" r="5" fill="#b8827b"/>
+  
+  <!-- Green stems and leaves -->
+  <g>
+    <!-- Main stem -->
+    <path d="M 120 154 Q 118 175 115 195" stroke="#6b8e5a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Left leaf -->
+    <path d="M 115 170 Q 105 168 100 178" stroke="#6b8e5a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="102" cy="175" rx="8" ry="5" fill="#7a9a66" opacity="0.8" transform="rotate(-30 102 175)"/>
+    
+    <!-- Right leaf -->
+    <path d="M 118 180 Q 128 180 132 190" stroke="#6b8e5a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="130" cy="187" rx="8" ry="5" fill="#7a9a66" opacity="0.8" transform="rotate(30 130 187)"/>
+  </g>
+  
+  <!-- Makeup brush accent - elegant and subtle -->
+  <g>
+    <!-- Brush handle coming from top right of rose -->
+    <line x1="155" y1="75" x2="175" y2="55" stroke="#c9a86d" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Brush bristles (soft, feathered) -->
+    <ellipse cx="177" cy="52" rx="6" ry="8" fill="url(#goldGradient)" opacity="0.9"/>
+    <path d="M 172 50 Q 175 45 178 48" stroke="#c9a86d" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 175 49 Q 177 43 180 47" stroke="#c9a86d" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 178 50 Q 180 44 182 49" stroke="#c9a86d" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Delicate gold accent circle -->
+  <circle cx="120" cy="120" r="110" fill="none" stroke="#c9a86d" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Small decorative gold stars/sparkles -->
+  <g fill="#c9a86d" opacity="0.7">
+    <circle cx="60" cy="120" r="2.5"/>
+    <circle cx="180" cy="120" r="2.5"/>
+    <circle cx="120" cy="50" r="2"/>
+  </g>
+</svg>
+

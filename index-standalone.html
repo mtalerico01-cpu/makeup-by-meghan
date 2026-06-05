@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup by Meghan - Professional Bridal Makeup Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    'rose-gold': '#d4a574',
+                    'dust-rose': '#c9a399',
+                    'cream': '#faf8f3',
+                    'ivory': '#f5f3f0',
+                    'sage': '#a8b8a8',
+                    'taupe': '#8a8680',
+                    'charcoal': '#3a3a38',
+                    'warm-gray': '#6b6b67',
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: #3a3a38;
+            line-height: 1.75;
+            letter-spacing: 0.01em;
+            background-color: #faf8f3;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #3a3a38;
+        }
+        
+        h1 {
+            font-size: 3.35rem;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            line-height: 1.15;
+        }
+        
+        h2 {
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+        
+        p {
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            color: #6b6b67;
+        }
+        
+        .font-semibold {
+            font-weight: 600 !important;
+        }
+        
+        .font-bold {
+            font-weight: 700 !important;
+        }
+        
+        .tracking-widest {
+            letter-spacing: 0.12em !important;
+        }
+        
+        /* Elegant shadows */
+        .shadow-elegant {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+        }
+        
+        .shadow-elegant-lg {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+        }
+        
+        /* Refined borders */
+        .border-elegant {
+            border-color: rgba(212, 165, 116, 0.2) !important;
+        }
+
+        .brand-signature {
+            position: relative;
+            display: inline-block;
+            padding-right: 0.35em;
+            margin-bottom: 0.38rem;
+        }
+
+        .brand-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .brand-lockup {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1;
+        }
+
+        .brand-signature::after {
+            content: '';
+            position: absolute;
+            left: 0.34em;
+            right: -0.08em;
+            bottom: 0.32em;
+            height: 1px;
+            background: #b79269;
+            opacity: 0.42;
+            transform: skewX(-7deg);
+        }
+
+        .brand-logo {
+            position: relative;
+            z-index: 1;
+            font-family: 'Mrs Saint Delafield', cursive;
+            font-weight: 300;
+            color: #111111;
+            letter-spacing: 0.005em;
+            line-height: 0.9;
+            transform: rotate(-0.6deg);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        .photo-upright {
+            display: block;
+            transform: rotate(0deg);
+            transform-origin: center center;
+            image-orientation: from-image;
+            object-position: center;
+        }
+
+        .brand-kicker {
+            margin-top: 0;
+            margin-left: 0.15rem;
+            font-size: 0.58rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #7b746b;
+            font-weight: 600;
+            line-height: 1.15;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 640px) {
+            .brand-kicker {
+                font-size: 0.62rem;
+            }
+        }
+
+        .section-photo-layer {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.28;
+            pointer-events: none;
+        }
+
+        .section-photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(250, 248, 243, 0.82) 0%, rgba(250, 248, 243, 0.7) 45%, rgba(250, 248, 243, 0.84) 100%);
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .mobile-calendar-wrap {
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div id="root"></div>
+
+    <script>
+        // Simple SPA without routing library
+        const app = {
+            currentPage: 'home',
+            bookingData: null,
+            mobileNavOpen: false,
+
+            // Navigation
+            navigate(page) {
+                this.currentPage = page;
+                this.mobileNavOpen = false;
+                this.render();
+                window.scrollTo(0, 0);
+            },
+
+            toggleMobileNav() {
+                this.mobileNavOpen = !this.mobileNavOpen;
+                this.render();
+            },
+
+            getBaseRate(eventType) {
+                switch (eventType) {
+                    case 'wedding':
+                        return 175;
+                    case 'gala':
+                    case 'prom':
+                    case 'party':
+                    case 'other':
+                        return 125;
+                    default:
+                        return 175;
+                }
+            },
+
+            getDiscountRate(numPeople) {
+                const people = Math.max(1, Number(numPeople) || 1);
+                if (people >= 9) return 0.20;
+                if (people >= 5) return 0.15;
+                if (people >= 3) return 0.10;
+                return 0;
+            },
+
+            getTravelRatePerMile() {
+                return 1.35;
+            },
+
+            getNonLocalBaseTravelFee() {
+                return 35;
+            },
+
+            calculateEstimateBreakdown(eventType, numPeople, travelArea, travelMiles, addonsFee) {
+                const people = Math.max(1, Number(numPeople) || 1);
+                const serviceSubtotal = this.getBaseRate(eventType) * people;
+                const discountRate = this.getDiscountRate(people);
+                const discountAmount = Math.round(serviceSubtotal * discountRate);
+                const miles = Math.max(0, Number(travelMiles) || 0);
+                const travelBase = travelArea === 'nonlocal' ? this.getNonLocalBaseTravelFee() : 0;
+                const travelMileage = travelArea === 'nonlocal'
+                    ? Math.round(miles * this.getTravelRatePerMile())
+                    : 0;
+                const travel = travelBase + travelMileage;
+                const addons = Math.max(0, Number(addonsFee) || 0);
+                const estimatedTotal = serviceSubtotal - discountAmount + travel + addons;
+                const depositDueNow = 250;
+                const remainingBalance = Math.max(0, estimatedTotal - depositDueNow);
+
+                return {
+                    serviceSubtotal,
+                    discountRate,
+                    discountAmount,
+                    travelArea,
+                    travelMiles: miles,
+                    travelBase,
+                    travelMileage,
+                    travel,
+                    addons,
+                    estimatedTotal,
+                    depositDueNow,
+                    remainingBalance
+                };
+            },
+
+            formatCurrency(amount) {
+                return `$${amount.toLocaleString('en-US')}`;
+            },
+
+            updateEstimate() {
+                const form = document.getElementById('bookingForm');
+                if (!form) return;
+
+                const eventType = form.querySelector('[name="eventType"]')?.value || 'wedding';
+                const numPeople = form.querySelector('[name="numGirls"]')?.value || 1;
+                const travelArea = form.querySelector('[name="travelArea"]')?.value || 'local';
+                const travelMiles = form.querySelector('[name="travelMiles"]')?.value || 0;
+                const addonsFee = form.querySelector('[name="addonsEstimate"]')?.value || 0;
+                const breakdown = this.calculateEstimateBreakdown(eventType, numPeople, travelArea, travelMiles, addonsFee);
+
+                const numPeopleLabelEl = document.getElementById('numPeopleLabel');
+                if (numPeopleLabelEl) {
+                    numPeopleLabelEl.textContent = eventType === 'wedding'
+                        ? 'Number of People (Bride + Bridesmaids) *'
+                        : 'Number of People *';
+                }
+
+                const fields = {
+                    estimateServiceSubtotal: breakdown.serviceSubtotal,
+                    estimateTravelBaseFee: breakdown.travelBase,
+                    estimateTravelMileageFee: breakdown.travelMileage,
+                    estimateTravelFee: breakdown.travel,
+                    estimateAddonsFee: breakdown.addons,
+                    estimateTotal: breakdown.estimatedTotal,
+                    estimateDepositDueNow: breakdown.depositDueNow,
+                    estimateRemainingBalance: breakdown.remainingBalance
+                };
+
+                Object.entries(fields).forEach(([id, value]) => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.textContent = this.formatCurrency(value);
+                    }
+                });
+
+                const summaryEl = document.getElementById('estimatePrice');
+                if (summaryEl) {
+                    summaryEl.textContent = this.formatCurrency(breakdown.estimatedTotal);
+                }
+
+                const discountLabelEl = document.getElementById('estimateDiscountLabel');
+                if (discountLabelEl) {
+                    discountLabelEl.textContent = breakdown.discountRate > 0
+                        ? `Group Discount (${Math.round(breakdown.discountRate * 100)}%)`
+                        : 'Group Discount';
+                }
+
+                const discountAmountEl = document.getElementById('estimateDiscountAmount');
+                if (discountAmountEl) {
+                    discountAmountEl.textContent = breakdown.discountAmount > 0
+                        ? `-${this.formatCurrency(breakdown.discountAmount)}`
+                        : this.formatCurrency(0);
+                }
+
+                const travelLabelEl = document.getElementById('estimateTravelLabel');
+                if (travelLabelEl) {
+                    if (breakdown.travelArea === 'nonlocal' && breakdown.travelMiles > 0) {
+                        travelLabelEl.textContent = `Travel Fee ($${this.getTravelRatePerMile().toFixed(2)}/mile x ${breakdown.travelMiles} miles)`;
+                    } else {
+                        travelLabelEl.textContent = 'Travel Fee';
+                    }
+                }
+            },
+
+            // Header Component
+            renderHeader() {
+                return `
+                    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="flex justify-between items-center h-20 sm:h-24 gap-4">
+                                <a onclick="app.navigate('home')" class="flex-shrink-0 cursor-pointer group">
+                                    <div class="brand-wrap">
+                                        <div class="brand-lockup">
+                                            <span class="brand-signature">
+                                                <span class="brand-logo text-[1.85rem] sm:text-[2.45rem] md:text-[3rem] group-hover:opacity-85 transition-opacity">Makeup by Meghan</span>
+                                            </span>
+                                            <span class="brand-kicker">Bridal Makeup Artist</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <nav class="hidden md:flex items-center gap-3">
+                                    <a onclick="app.navigate('home')" class="rounded-full px-4 py-2 text-sm font-medium cursor-pointer transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='home'?'background:#d4a574;color:#fff;':'background:transparent;color:#b07c72;'}">Home</a>
+                                    <a onclick="app.navigate('about')" class="rounded-full px-4 py-2 text-sm font-medium cursor-pointer transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='about'?'background:#d4a574;color:#fff;':'background:transparent;color:#b07c72;'}">About</a>
+                                    <a onclick="app.navigate('pricing')" class="rounded-full px-4 py-2 text-sm font-medium cursor-pointer transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='pricing'?'background:#d4a574;color:#fff;':'background:transparent;color:#b07c72;'}">Pricing</a>
+                                    <a href="#gallery" class="rounded-full px-4 py-2 text-sm font-medium transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);background:transparent;color:#b07c72;">Gallery</a>
+                                    <a href="#testimonials" class="rounded-full px-4 py-2 text-sm font-medium transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);background:transparent;color:#b07c72;">Reviews</a>
+                                    <button onclick="app.navigate('booking')" class="rounded-full px-6 py-2 text-sm font-medium hover:opacity-90 transition-opacity shadow-elegant" style="background:#d4a574;color:#fff;${this.currentPage==='booking'?'opacity:0.85;':''}">Book Now</button>
+                                </nav>
+                                <button onclick="app.toggleMobileNav()" class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-full transition-colors" style="border:1.5px solid rgba(212,165,116,0.5);color:#3a3a38;background:transparent;" aria-label="Toggle navigation" aria-expanded="${this.mobileNavOpen}">
+                                    <span class="sr-only">Open menu</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" style="width:1.2rem;height:1.2rem;display:block;color:inherit;">
+                                        <line x1="3" y1="5" x2="17" y2="5"/>
+                                        <line x1="3" y1="10" x2="17" y2="10"/>
+                                        <line x1="3" y1="15" x2="17" y2="15"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="md:hidden pb-4 ${this.mobileNavOpen ? 'block' : 'hidden'}">
+                                <div class="rounded-2xl bg-cream p-4" style="border:1.5px solid rgba(212,165,116,0.5);">
+                                    <div class="grid grid-cols-2 gap-3 text-sm font-medium">
+                                        <a onclick="app.navigate('home')" class="rounded-full px-4 py-3 text-center cursor-pointer transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='home'?'background:#d4a574;color:#fff;':'background:transparent;color:#b07c72;'}">Home</a>
+                                        <a onclick="app.navigate('about')" class="rounded-full px-4 py-3 text-center cursor-pointer transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='about'?'background:#d4a574;color:#fff;':'background:transparent;color:#b07c72;'}">About</a>
+                                        <a onclick="app.navigate('pricing')" class="rounded-full px-4 py-3 text-center cursor-pointer transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='pricing'?'background:#d4a574;color:#fff;':'background:transparent;color:#b07c72;'}">Pricing</a>
+                                        <a href="#gallery" class="rounded-full px-4 py-3 text-center transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);background:transparent;color:#b07c72;">Gallery</a>
+                                        <a href="#testimonials" class="rounded-full px-4 py-3 text-center transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);background:transparent;color:#b07c72;">Reviews</a>
+                                        <button onclick="app.navigate('booking')" class="rounded-full px-4 py-3 text-center transition-colors" style="border:1.5px solid rgba(212,165,116,0.6);${this.currentPage==='booking'?'background:#d4a574;color:#fff;':'background:#d4a574;color:#fff;'}">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                `;
+            },
+
+            // Footer Component
+            renderFooter() {
+                const year = new Date().getFullYear();
+                return `
+                    <footer class="bg-charcoal text-white py-12">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-white/15">
+                                <div>
+                                    <h3 class="font-serif text-xl font-semibold text-rose-gold mb-2">Makeup by Meghan</h3>
+                                    <p class="text-gray-200">Professional bridal makeup artistry for weddings and elevated events.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-rose-gold mb-3">Quick Links</h4>
+                                    <ul class="space-y-2 text-gray-300">
+                                        <li><a onclick="app.navigate('home')" class="hover:text-rose-gold transition-colors cursor-pointer">Home</a></li>
+                                        <li><a onclick="app.navigate('about')" class="hover:text-rose-gold transition-colors cursor-pointer">About</a></li>
+                                        <li><a onclick="app.navigate('pricing')" class="hover:text-rose-gold transition-colors cursor-pointer">Pricing</a></li>
+                                        <li><a onclick="app.navigate('booking')" class="hover:text-rose-gold transition-colors cursor-pointer">Book Now</a></li>
+                                        <li><a href="#gallery" class="hover:text-rose-gold transition-colors">Gallery</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-rose-gold mb-3">Contact</h4>
+                                    <p class="text-gray-300 mb-2">
+                                        <a href="mailto:meghantalerico@gmail.com" class="hover:text-rose-gold transition-colors">meghantalerico@gmail.com</a>
+                                    </p>
+                                    <p class="text-gray-300 mb-2">
+                                        <a href="tel:+17708655862" class="hover:text-rose-gold transition-colors">770 865 5862</a>
+                                    </p>
+                                    <p class="text-gray-300">Serving brides, bridal parties, and special events across Johns Creek and Metro Atlanta.</p>
+                                </div>
+                            </div>
+                            <div class="text-center text-gray-400 text-sm">
+                                <p>&copy; ${year} Makeup by Meghan. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            },
+
+            // Home Page
+            renderHome() {
+                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                const today = new Date();
+                const currentMonth = today.getMonth();
+                const currentYear = today.getFullYear();
+                
+                // Generate calendar days
+                const firstDay = new Date(currentYear, currentMonth, 1);
+                const lastDay = new Date(currentYear, currentMonth + 1, 0);
+                const daysInMonth = lastDay.getDate();
+                const startingDayOfWeek = firstDay.getDay();
+                
+                let calendarDays = '';
+                // Empty cells for days before month starts
+                for (let i = 0; i < startingDayOfWeek; i++) {
+                    calendarDays += '<div class="text-gray-300 text-center py-2"></div>';
+                }
+                // Days of month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = new Date(currentYear, currentMonth, day);
+                    const dateString = date.toISOString().split('T')[0];
+                    const isToday = day === today.getDate();
+                    const isPast = date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                    
+                    if (isPast) {
+                        calendarDays += `<div class="text-gray-300 text-center py-2 text-sm">${day}</div>`;
+                    } else {
+                        calendarDays += `
+                            <button onclick="app.selectBookingDate('${dateString}')" class="group relative text-center py-2 text-sm font-semibold rounded-lg transition-all duration-200 ${isToday ? 'bg-amber-600 text-white shadow-md' : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-amber-600 hover:bg-amber-50 hover:shadow-md'}">
+                                ${day}
+                            </button>
+                        `;
+                    }
+                }
+                
+                return `
+                    ${this.renderHeader()}
+                    <main>
+                        <!-- Hero Section with Calendar -->
+                        <section class="relative overflow-hidden bg-cream py-14 sm:py-16 md:py-32">
+                            <div class="section-photo-layer" style="background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1600&h=1000&fit=crop')"></div>
+                            <div class="section-photo-overlay"></div>
+                            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+                                    <!-- Left Content -->
+                                    <div class="flex flex-col gap-6 sm:gap-8">
+                                        <div>
+                                            <p class="text-rose-gold text-[11px] sm:text-xs font-semibold tracking-widest uppercase mb-4">Professional Bridal Makeup</p>
+                                            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-charcoal font-semibold leading-tight mb-5 sm:mb-6">Flawless Beauty,<br />Unforgettable Moment</h1>
+                                        </div>
+                                            <p class="text-warm-gray text-base sm:text-lg leading-relaxed max-w-lg">Every wedding look is customized for your features, photography timeline, and bridal style. Meghan delivers polished, long-wear artistry so you feel confident from first look to final dance.</p>
+                                        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
+                                            <button onclick="app.navigate('booking')" class="inline-block bg-rose-gold text-white px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity shadow-elegant min-h-12">Book Your Appointment</button>
+                                            <a href="tel:+17708655862" class="inline-flex items-center justify-center gap-2 border-2 border-rose-gold text-rose-gold px-8 py-4 rounded-full font-medium transition-all min-h-12 no-underline" style="color:var(--rose-gold,#b07c72);">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:1.1em;height:1.1em;flex-shrink:0;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                                                <span style="color:inherit;">Call Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Calendar Widget -->
+                                    <div class="relative h-full mobile-calendar-wrap">
+                                        <div class="sticky top-20 sm:top-24 bg-white rounded-2xl shadow-elegant-lg p-4 sm:p-6 lg:p-8 border border-elegant">
+                                            <h3 class="font-serif text-xl sm:text-2xl font-semibold text-charcoal mb-2">Select Your Date</h3>
+                                            <p class="text-warm-gray text-xs sm:text-sm mb-4 sm:mb-6">Pick a date and start booking</p>
+                                            
+                                            <!-- Month/Year Header -->
+                                            <div class="flex justify-between items-center mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-elegant">
+                                                <h4 class="font-semibold text-sm sm:text-base text-charcoal">${monthNames[currentMonth]} ${currentYear}</h4>
+                                                <div class="flex gap-2">
+                                                    <span class="text-[10px] sm:text-xs text-taupe">← Current Month →</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Day Headers -->
+                                            <div class="grid grid-cols-7 gap-1 sm:gap-2 mb-3">
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Sun</div>
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Mon</div>
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Tue</div>
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Wed</div>
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Thu</div>
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Fri</div>
+                                                <div class="text-center text-[10px] sm:text-xs font-semibold text-rose-gold py-2">Sat</div>
+                                            </div>
+                                            
+                                            <!-- Calendar Grid -->
+                                            <div class="grid grid-cols-7 gap-1 sm:gap-2 mb-4 sm:mb-6">
+                                                ${calendarDays}
+                                            </div>
+                                            
+                                            <!-- Info Box -->
+                                            <div class="bg-ivory border-l-4 border-rose-gold p-3 sm:p-4 rounded">
+                                                <p class="text-xs sm:text-sm text-charcoal">
+                                                    <span class="font-semibold">✨ Tip:</span> Click any available date to jump straight to your booking form!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- About Section -->
+                        <section class="bg-white py-16 md:py-24">
+                            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="text-center">
+                                    <h2 class="font-serif text-4xl md:text-5xl text-charcoal font-semibold mb-8">Experience You Can Feel.<br />Beauty You Can See.</h2>
+                                    <p class="text-lg text-warm-gray leading-relaxed mb-6">Your wedding day deserves nothing but perfection. We specialize in listening to you and creating looks that mirror your unique style and story. Our expert team of makeup artists is dedicated to transforming your vision into reality.</p>
+                                    <p class="text-lg text-warm-gray leading-relaxed">From glamorous modern aesthetics to timeless elegance, we understand the diverse tastes of today's brides and bridesmaids. We craft looks that don't just photograph beautifully—they last all night.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Services -->
+                        <section class="bg-cream py-16 md:py-24">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <h2 class="font-serif text-4xl md:text-5xl text-charcoal font-semibold text-center mb-16">What We Offer</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div class="text-center">
+                                        <div class="text-5xl mb-4">💄</div>
+                                        <h3 class="font-semibold text-lg text-charcoal mb-3">Bridal Makeup</h3>
+                                        <p class="text-warm-gray">Stunning, long-lasting makeup that makes you feel confident and beautiful on your special day.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-5xl mb-4">👯</div>
+                                        <h3 class="font-semibold text-lg text-charcoal mb-3">Bridesmaids</h3>
+                                        <p class="text-warm-gray">Coordinated makeup looks for your entire wedding party that photograph beautifully together.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-5xl mb-4">✨</div>
+                                        <h3 class="font-semibold text-lg text-charcoal mb-3">Special Events</h3>
+                                        <p class="text-warm-gray">Professional makeup for galas, proms, anniversaries, and any special celebration.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-5xl mb-4">💅</div>
+                                        <h3 class="font-semibold text-lg text-charcoal mb-3">Consultations</h3>
+                                        <p class="text-warm-gray">Expert advice on makeup styles, colors, and techniques tailored to your unique features.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Gallery -->
+                        <section id="gallery" class="bg-white py-16 md:py-24">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="text-center mb-16">
+                                    <h2 class="font-serif text-4xl md:text-5xl text-charcoal font-semibold mb-4">Real Brides & Bridal Party</h2>
+                                    <p class="text-lg text-warm-gray max-w-2xl mx-auto">Open-source bridal portraits and wedding-day moments featuring real brides and bridesmaids</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <div class="group relative rounded-lg overflow-hidden h-72 cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+                                        <img src="https://images.unsplash.com/photo-1481066717861-4775e000c88a?q=80&w=500&h=600&fit=crop" alt="Bride smelling flowers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <p class="text-white font-semibold text-xl">Real Bride</p>
+                                        </div>
+                                    </div>
+                                    <div class="group relative rounded-lg overflow-hidden h-72 cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+                                        <img src="https://images.unsplash.com/photo-1649305795256-a48bb558ce1d?q=80&w=500&h=600&fit=crop" alt="Bridesmaids wedding photo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <p class="text-white font-semibold text-xl">Bride & Bridesmaids</p>
+                                        </div>
+                                    </div>
+                                    <div class="group relative rounded-lg overflow-hidden h-72 cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+                                        <img src="https://images.unsplash.com/photo-1633076748077-4ef9d2ab701c?q=80&w=500&h=600&fit=crop" alt="Bride portrait in wedding dress" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <p class="text-white font-semibold text-xl">Bridal Portrait</p>
+                                        </div>
+                                    </div>
+                                    <div class="group relative rounded-lg overflow-hidden h-72 cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+                                        <img src="https://images.unsplash.com/photo-1679599441191-aa411b7ac27d?q=80&w=500&h=600&fit=crop" alt="Bride getting ready" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <p class="text-white font-semibold text-xl">Bridal Prep</p>
+                                        </div>
+                                    </div>
+                                    <div class="group relative rounded-lg overflow-hidden h-72 cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+                                        <img src="https://images.unsplash.com/photo-1649305795256-a48bb558ce1d?q=80&w=500&h=600&fit=crop" alt="Bridesmaids together" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <p class="text-white font-semibold text-xl">Bridesmaids</p>
+                                        </div>
+                                    </div>
+                                    <div class="group relative rounded-lg overflow-hidden h-72 cursor-pointer shadow-md hover:shadow-xl transition-shadow">
+                                        <img src="https://images.unsplash.com/photo-1633076748077-4ef9d2ab701c?q=80&w=500&h=600&fit=crop" alt="Wedding day bride portrait" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <p class="text-white font-semibold text-xl">Wedding Party</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Testimonials -->
+                        <section id="testimonials" class="bg-white py-16 md:py-24">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="text-center mb-16">
+                                    <h2 class="font-serif text-4xl md:text-5xl text-gray-700 font-bold mb-4">Hear From Our Happy Brides</h2>
+                                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Trusted by hundreds of brides and event attendees. See why our clients love our service.</p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                        <div class="flex gap-1 justify-center mb-3">
+                                            <span class="text-yellow-400 text-lg">★★★★★</span>
+                                        </div>
+                                        <p class="text-gray-700 text-center mb-6 leading-relaxed italic">"Meghan made me feel like a goddess on my wedding day. Her attention to detail was incredible, and my makeup stayed flawless through the entire ceremony and reception!"</p>
+                                        <div class="text-center">
+                                            <p class="font-semibold text-gray-700">Sarah M.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                        <div class="flex gap-1 justify-center mb-3">
+                                            <span class="text-yellow-400 text-lg">★★★★★</span>
+                                        </div>
+                                        <p class="text-gray-700 text-center mb-6 leading-relaxed italic">"I was stressed about getting 8 bridesmaids ready in time, but Meghan and her team absolutely crushed it. Everyone felt beautiful and confident. Cannot recommend enough!"</p>
+                                        <div class="text-center">
+                                            <p class="font-semibold text-gray-700">Jessica L.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                        <div class="flex gap-1 justify-center mb-3">
+                                            <span class="text-yellow-400 text-lg">★★★★★</span>
+                                        </div>
+                                        <p class="text-gray-700 text-center mb-6 leading-relaxed italic">"The entire experience was seamless from start to finish. Not only did my makeup look stunning in person, but it photographed even better. Truly a professional!"</p>
+                                        <div class="text-center">
+                                            <p class="font-semibold text-gray-700">Amanda R.</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                        <div class="flex gap-1 justify-center mb-3">
+                                            <span class="text-yellow-400 text-lg">★★★★★</span>
+                                        </div>
+                                        <p class="text-gray-700 text-center mb-6 leading-relaxed italic">"I had a gala event and Meghan created the most elegant look. She really listened to what I wanted and enhanced my natural beauty. Best decision ever!"</p>
+                                        <div class="text-center">
+                                            <p class="font-semibold text-gray-700">Michelle T.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- CTA -->
+                        <section class="bg-gradient-to-r from-gray-700 to-gray-800 text-white py-16 md:py-24">
+                            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                                <h2 class="font-serif text-5xl md:text-6xl font-bold mb-6">Let's Create Your Look</h2>
+                                <p class="text-xl mb-8 opacity-90">Let's make your vision come to life. Reach out to us for inquiries and bookings.</p>
+                                <button onclick="app.navigate('booking')" class="inline-block bg-amber-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-700 transition-colors">BOOK NOW →</button>
+                            </div>
+                        </section>
+                    </main>
+                    ${this.renderFooter()}
+                `;
+            },
+
+            // About Page
+            renderAbout() {
+                return `
+                    ${this.renderHeader()}
+                    <main>
+                        <!-- Hero -->
+                        <section class="relative overflow-hidden bg-gray-50 py-16 md:py-24">
+                            <div class="section-photo-layer" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&h=1000&fit=crop')"></div>
+                            <div class="section-photo-overlay"></div>
+                            <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                                        <img src="./Headshot_Meghan.png" alt="Meghan" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <h1 class="font-serif text-5xl md:text-6xl font-bold text-gray-700 mb-6">Meghan Talerico</h1>
+                                        <p class="text-xl text-amber-600 font-semibold mb-6">Professional Makeup Artist | Certified Medical Assistant | CoolSculpting Expert | Johns Creek, GA</p>
+                                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Hi! I'm Meghan Talerico, a passionate makeup artist dedicated to helping you feel confident and beautiful on your most important days.</p>
+                                        <p class="text-lg text-gray-700 leading-relaxed">With over 7 years of professional experience in the cosmetic and plastic surgery field, combined with 5+ years specializing in wedding and event makeup, and additional training as a certified medical assistant and CoolSculpting expert, I bring expertise, precision, and artistry to every look I create.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Story -->
+                        <section class="py-16 md:py-24 bg-white">
+                            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-700 mb-12 text-center">My Story</h2>
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                                    <div class="space-y-8 text-lg text-gray-700 leading-relaxed">
+                                        <p>I'm a born and raised Atlanta girl with deep roots in Georgia. Growing up in the South instilled in me values of hospitality, grace, and a genuine love for making others feel special—qualities that shine through in every service I provide.</p>
+                                        <p>My journey in beauty began over 7 years ago when I discovered my passion for cosmetics and skincare in the professional beauty and plastic surgery field. This foundation gave me a deep understanding of skin care, color theory, and how makeup can truly enhance and celebrate a person's natural features.</p>
+                                        <p>Alongside my beauty work, I am also a certified medical assistant and a CoolSculpting expert, which has strengthened my knowledge of aesthetics, client care, and the confidence that comes from helping people look and feel their best.</p>
+                                        <p>For the past 5+ years, I've dedicated myself to mastering the art of bridal and event makeup. I've had the privilege of working with hundreds of beautiful brides, bridesmaids, and event attendees, creating looks that make them feel confident, radiant, and ready to take on their special day.</p>
+                                        <p>Now based in Johns Creek, Georgia, I continue to fuel my passion for beauty while being present for what matters most to me—my faith and my family.</p>
+                                    </div>
+                                    <div class="rounded-2xl overflow-hidden shadow-lg" style="min-height:480px;background-image:url('./Family_Pic_web.jpg');background-size:cover;background-position:center top;">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Family & Values -->
+                        <section class="py-16 md:py-24 bg-gray-50">
+                            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-700 mb-12 text-center">What Matters Most</h2>
+                                <div class="space-y-6">
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-amber-600 mb-3">My Faith</h3>
+                                            <p class="text-gray-700 leading-relaxed">My Christian faith is the foundation of who I am and how I serve others. It shapes my values of kindness, integrity, and genuine care for those around me.</p>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-amber-600 mb-3">My Family</h3>
+                                            <p class="text-gray-700 leading-relaxed mb-4">My greatest joy is my family. My husband Michael and our four wonderful children—Everett, Elliana, Emerson, and Easton—are my heart and my inspiration.</p>
+                                            <p class="text-gray-700 leading-relaxed">Balancing my passion for beauty with my role as a mother has taught me the importance of presence, grace under pressure, and creating beautiful moments that last.</p>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-amber-600 mb-3">My Passion for Beauty</h3>
+                                            <p class="text-gray-700 leading-relaxed">I believe that beauty is about more than makeup—it's about helping someone feel their best self. Whether it's enhancing natural features or creating a bold new look, my goal is always to celebrate who you are.</p>
+                                        </div>
+                                        <div class="rounded-2xl overflow-hidden shadow-lg mt-4">
+                                            <img src="./Family_photo_horses_web.jpg" alt="Meghan's family with horses" style="display:block;width:100%;height:auto;">
+                                        </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Experience -->
+                        <section class="py-16 md:py-24 bg-white">
+                            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-700 mb-12 text-center">Professional Background</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                                    <div class="bg-gray-50 p-8 rounded-xl">
+                                        <div class="text-5xl font-bold text-amber-600 mb-4">7+</div>
+                                        <h3 class="text-xl font-bold text-gray-700 mb-3">Years in Beauty</h3>
+                                        <p class="text-gray-700">Professional experience in cosmetics and plastic surgery backgrounds, providing deep expertise in skin care and makeup artistry.</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-xl">
+                                        <div class="text-5xl font-bold text-amber-600 mb-4">5+</div>
+                                        <h3 class="text-xl font-bold text-gray-700 mb-3">Years Bridal & Events</h3>
+                                        <p class="text-gray-700">Specialized experience creating stunning looks for weddings, bridal parties, and special events throughout Georgia.</p>
+                                    </div>
+                                    <div class="bg-gray-50 p-8 rounded-xl">
+                                        <div class="text-5xl font-bold text-amber-600 mb-4">CMA</div>
+                                        <h3 class="text-xl font-bold text-gray-700 mb-3">Medical Aesthetics</h3>
+                                        <p class="text-gray-700">Certified medical assistant with CoolSculpting expertise, bringing a deeper understanding of client care and aesthetic services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    ${this.renderFooter()}
+                `;
+            },
+
+            // Pricing Page
+            renderPricing() {
+                return `
+                    ${this.renderHeader()}
+                    <main>
+                        <!-- Pricing Hero -->
+                        <section class="relative overflow-hidden bg-gradient-to-br from-gray-50 to-white py-16 md:py-24">
+                            <div class="section-photo-layer" style="background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1600&h=1000&fit=crop')"></div>
+                            <div class="section-photo-overlay"></div>
+                            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                                <h1 class="font-serif text-5xl md:text-6xl text-gray-700 font-bold mb-6">Wedding & Event Pricing</h1>
+                                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Clear, professional rates for brides and bridal parties. Luxury artistry with dependable, day-of-ready service.</p>
+                            </div>
+                        </section>
+
+                        <!-- Main Pricing Cards -->
+                        <section class="bg-white py-16 md:py-24">
+                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16 items-stretch">
+                                    <!-- Bridal Package -->
+                                    <div class="relative group h-full">
+                                        <div class="absolute inset-0 bg-gradient-to-r from-amber-600 to-amber-500 rounded-2xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
+                                        <div class="relative bg-white border-2 border-amber-600 rounded-2xl p-7 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
+                                            <div class="absolute -top-4 left-6 sm:left-8 bg-amber-600 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-semibold tracking-wide">Most Popular</div>
+                                            <div class="pt-4 sm:pt-6">
+                                                <h3 class="font-serif text-2xl sm:text-[2.1rem] font-semibold text-gray-700 mb-2">Bridal Makeup</h3>
+                                                <p class="text-gray-600 text-sm sm:text-[0.95rem] leading-relaxed mb-6 min-h-[3rem]">For the most important day of your life</p>
+                                            </div>
+                                            <div class="mb-7 sm:mb-8">
+                                                <div class="text-4xl sm:text-5xl font-semibold text-amber-600 mb-2">\$225</div>
+                                                <p class="text-gray-600 text-sm">Per person</p>
+                                            </div>
+                                            <ul class="space-y-3 sm:space-y-4 mb-8 text-gray-700 text-sm sm:text-[0.95rem] flex-1">
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-amber-600 font-semibold mt-1">✓</span>
+                                                    <span>Professional makeup application</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-amber-600 font-semibold mt-1">✓</span>
+                                                    <span>Custom color consultation</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-amber-600 font-semibold mt-1">✓</span>
+                                                    <span>All-day wear guarantee</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-amber-600 font-semibold mt-1">✓</span>
+                                                    <span>Touch-up kit included</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-amber-600 font-semibold mt-1">✓</span>
+                                                    <span>Premium product selection</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-amber-600 font-semibold mt-1">✓</span>
+                                                    <span>Complimentary trial appointment</span>
+                                                </li>
+                                            </ul>
+                                            <button onclick="app.navigate('booking')" class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors mt-auto">Book Now</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bridesmaid Package -->
+                                    <div class="group h-full">
+                                        <div class="absolute inset-0 bg-gray-100 rounded-2xl blur opacity-0 group-hover:opacity-10 transition-all duration-300"></div>
+                                        <div class="relative bg-white border-2 border-gray-300 rounded-2xl p-7 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                                            <div class="pt-4 sm:pt-6">
+                                                <h3 class="font-serif text-2xl sm:text-[2.1rem] font-semibold text-gray-700 mb-2">Bridesmaid</h3>
+                                                <p class="text-gray-600 text-sm sm:text-[0.95rem] leading-relaxed mb-6 min-h-[3rem]">For the wedding party</p>
+                                            </div>
+                                            <div class="mb-7 sm:mb-8">
+                                                <div class="text-4xl sm:text-5xl font-semibold text-gray-700 mb-2">\$150</div>
+                                                <p class="text-gray-600 text-sm">Per person</p>
+                                            </div>
+                                            <ul class="space-y-3 sm:space-y-4 mb-8 text-gray-700 text-sm sm:text-[0.95rem] flex-1">
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Professional makeup application</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Coordinated look with bridal party</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>All-day wear guarantee</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Quick touch-up kit</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Premium products</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✗</span>
+                                                    <span class="text-gray-400">Trial appointment (optional +\$50)</span>
+                                                </li>
+                                            </ul>
+                                            <button onclick="app.navigate('booking')" class="w-full bg-gray-700 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors mt-auto">Book Now</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Special Events Package -->
+                                    <div class="group h-full">
+                                        <div class="absolute inset-0 bg-gray-100 rounded-2xl blur opacity-0 group-hover:opacity-10 transition-all duration-300"></div>
+                                        <div class="relative bg-white border-2 border-gray-300 rounded-2xl p-7 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                                            <div class="pt-4 sm:pt-6">
+                                                <h3 class="font-serif text-2xl sm:text-[2.1rem] font-semibold text-gray-700 mb-2">Special Events</h3>
+                                                <p class="text-gray-600 text-sm sm:text-[0.95rem] leading-relaxed mb-6 min-h-[3rem]">Galas, proms, parties & more</p>
+                                            </div>
+                                            <div class="mb-7 sm:mb-8">
+                                                <div class="text-4xl sm:text-5xl font-semibold text-gray-700 mb-2">\$125</div>
+                                                <p class="text-gray-600 text-sm">Per person</p>
+                                            </div>
+                                            <ul class="space-y-3 sm:space-y-4 mb-8 text-gray-700 text-sm sm:text-[0.95rem] flex-1">
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Professional makeup application</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Style consultation</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Event-appropriate wear</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Quick touch-up kit</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✓</span>
+                                                    <span>Standard products</span>
+                                                </li>
+                                                <li class="flex items-start gap-3">
+                                                    <span class="text-gray-400 font-semibold mt-1">✗</span>
+                                                    <span class="text-gray-400">Trial appointment</span>
+                                                </li>
+                                            </ul>
+                                            <button onclick="app.navigate('booking')" class="w-full bg-gray-700 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors mt-auto">Book Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Group Discounts -->
+                                <div class="bg-amber-50 border-2 border-amber-600 rounded-2xl p-8 mb-16">
+                                    <h3 class="font-serif text-3xl font-bold text-gray-700 mb-6">Group Booking Discounts</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-amber-600 mb-2">3-4 People</div>
+                                            <p class="text-gray-700">10% discount on each person</p>
+                                        </div>
+                                        <div class="text-center border-l border-r border-gray-300 px-4">
+                                            <div class="text-2xl font-bold text-amber-600 mb-2">5-8 People</div>
+                                            <p class="text-gray-700">15% discount on each person</p>
+                                        </div>
+                                        <div class="text-center border-l border-r border-gray-300 px-4">
+                                            <div class="text-2xl font-bold text-amber-600 mb-2">9+ People</div>
+                                            <p class="text-gray-700">20% discount on each person</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="text-2xl font-bold text-amber-600 mb-2">Bride + 5 BMs</div>
+                                            <p class="text-gray-700">Special wedding package</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Booking Policies -->
+                                <div class="bg-white border-2 border-amber-200 rounded-2xl p-8 mb-16 shadow-sm">
+                                    <h3 class="font-serif text-3xl font-bold text-gray-700 mb-5">Booking & Payment Policy</h3>
+                                    <ul class="space-y-3 text-gray-700">
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-amber-600 font-semibold mt-1">•</span>
+                                            <span>A non-refundable $250 security deposit is collected at the time of booking to reserve your date.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-amber-600 font-semibold mt-1">•</span>
+                                            <span>Remaining balance must be paid in full no later than 2 weeks prior to the wedding date.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-amber-600 font-semibold mt-1">•</span>
+                                            <span>Bookings are confirmed only after the signed agreement and security deposit are received.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Add-ons -->
+                                <div>
+                                    <h3 class="font-serif text-3xl font-bold text-gray-700 mb-8">Add-On Services</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                                            <h4 class="font-bold text-gray-700 mb-2">Trial Makeup Appointment</h4>
+                                            <p class="text-amber-600 font-bold text-lg mb-2">\$50</p>
+                                            <p class="text-gray-600 text-sm">Perfect for planning your bridal look or event makeup in advance</p>
+                                        </div>
+                                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                                            <h4 class="font-bold text-gray-700 mb-2">Touch-Up Service (Hourly)</h4>
+                                            <p class="text-amber-600 font-bold text-lg mb-2">\$50</p>
+                                            <p class="text-gray-600 text-sm">On-site touch-ups during your event (minimum 1 hour)</p>
+                                        </div>
+                                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                                            <h4 class="font-bold text-gray-700 mb-2">False Lashes Application</h4>
+                                            <p class="text-amber-600 font-bold text-lg mb-2">\$25</p>
+                                            <p class="text-gray-600 text-sm">Add premium false lashes to any makeup service</p>
+                                        </div>
+                                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                                            <h4 class="font-bold text-gray-700 mb-2">Airbrush Makeup Add-On</h4>
+                                            <p class="text-amber-600 font-bold text-lg mb-2">\$50+</p>
+                                            <p class="text-gray-600 text-sm">Longer wear, flawless coverage (HD cameras ready)</p>
+                                        </div>
+                                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                                            <h4 class="font-bold text-gray-700 mb-2">Travel Fee (Outside Johns Creek)</h4>
+                                            <p class="text-amber-600 font-bold text-lg mb-2">\$50-100</p>
+                                            <p class="text-gray-600 text-sm">Applicable for events 20+ minutes from Johns Creek</p>
+                                        </div>
+                                        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                                            <h4 class="font-bold text-gray-700 mb-2">Wedding Day Coordination</h4>
+                                            <p class="text-amber-600 font-bold text-lg mb-2">\$100</p>
+                                            <p class="text-gray-600 text-sm">On-site scheduling & coordination for multiple clients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- FAQ Section -->
+                        <section class="bg-gray-50 py-16 md:py-24">
+                            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                                <h2 class="font-serif text-4xl font-bold text-gray-700 text-center mb-16">Pricing Questions</h2>
+                                <div class="space-y-8">
+                                    <div class="bg-white rounded-xl p-6 border-l-4 border-amber-600">
+                                        <h3 class="font-bold text-gray-700 text-lg mb-2">Do you offer payment plans or deposits?</h3>
+                                        <p class="text-gray-600">A non-refundable $250 security deposit is required at booking. The remaining balance is due in full 2 weeks before your wedding date.</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-6 border-l-4 border-amber-600">
+                                        <h3 class="font-bold text-gray-700 text-lg mb-2">What's included in the touch-up kit?</h3>
+                                        <p class="text-gray-600">Your custom touch-up kit includes powder, lipstick, concealer, and blush in your exact shades for easy mid-day maintenance.</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-6 border-l-4 border-amber-600">
+                                        <h3 class="font-bold text-gray-700 text-lg mb-2">Can I get a discount if I book multiple services?</h3>
+                                        <p class="text-gray-600">Absolutely! Group discounts apply automatically when booking 3+ people. Contact us for custom wedding packages.</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-6 border-l-4 border-amber-600">
+                                        <h3 class="font-bold text-gray-700 text-lg mb-2">What if I want a makeup style I'm unsure about?</h3>
+                                        <p class="text-gray-600">Book a trial appointment! This is the perfect time to experiment with different styles, colors, and techniques with no pressure.</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-6 border-l-4 border-amber-600">
+                                        <h3 class="font-bold text-gray-700 text-lg mb-2">How far do you travel?</h3>
+                                        <p class="text-gray-600">I primarily serve the Atlanta metro and surrounding areas. Travel fees apply for events 20+ minutes from Johns Creek, GA.</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-6 border-l-4 border-amber-600">
+                                        <h3 class="font-bold text-gray-700 text-lg mb-2">What happens if I need to reschedule?</h3>
+                                        <p class="text-gray-600">We understand life happens! 2 weeks notice for free rescheduling. Less notice may forfeit the deposit.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-12 bg-white rounded-xl p-6 border border-amber-200">
+                                    <h3 class="font-serif text-2xl font-bold text-gray-700 mb-4">Bridal Prep Tips</h3>
+                                    <ul class="space-y-3 text-gray-700">
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-amber-600 font-semibold mt-1">•</span>
+                                            <span>Please arrive with a clean, moisturized face (no makeup) for best application results.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-amber-600 font-semibold mt-1">•</span>
+                                            <span>Wear a button-down robe or top to avoid disturbing makeup when changing.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-amber-600 font-semibold mt-1">•</span>
+                                            <span>Final headcount and timeline should be confirmed 14 days prior to the event.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- CTA Section -->
+                        <section class="bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 text-white py-16 md:py-24">
+                            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Ready to Book?</h2>
+                                <p class="text-xl text-gray-200 mb-8">Let's create a beautiful look for your special moment.</p>
+                                <button onclick="app.navigate('booking')" class="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-amber-700 transition-colors shadow-lg">Book Your Appointment Now</button>
+                            </div>
+                        </section>
+                    </main>
+                    ${this.renderFooter()}
+                `;
+            },
+
+            // Booking Page
+            renderBooking() {
+                const selectedDate = this.bookingData?.date ? new Date(this.bookingData.date).toISOString().split('T')[0] : '';
+                const initialBreakdown = this.calculateEstimateBreakdown('wedding', 1, 'local', 0, 0);
+                
+                return `
+                    ${this.renderHeader()}
+                    <main>
+                        <div class="relative overflow-hidden min-h-screen bg-gradient-to-br from-gray-50 to-white flex items-center py-12">
+                            <div class="section-photo-layer" style="background-image:url('https://images.unsplash.com/photo-1464863979621-258859e62245?w=1600&h=1000&fit=crop')"></div>
+                            <div class="section-photo-overlay"></div>
+                            <div class="relative z-10 w-full max-w-2xl mx-auto px-4">
+                                <div class="text-center mb-12">
+                                    <h1 class="font-serif text-5xl font-bold text-gray-700 mb-2">Book Your Appointment</h1>
+                                    <p class="text-xl text-gray-600">We're excited to help you look your best!</p>
+                                </div>
+
+                                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                                    <form id="bookingForm" onsubmit="return app.handleSubmit(event)">
+                                        <div class="mb-8">
+                                            <h3 class="font-serif text-2xl font-bold text-gray-700 mb-6 pb-4 border-b-2 border-gray-50">Event Information</h3>
+
+                                            <div class="mb-6">
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Event Type *</label>
+                                                <select name="eventType" onchange="app.updateEstimate()" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                    <option value="wedding">Wedding</option>
+                                                    <option value="gala">Gala/Formal Event</option>
+                                                    <option value="prom">Prom</option>
+                                                    <option value="party">Party</option>
+                                                    <option value="other">Other Event</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                                <div>
+                                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Event Date *</label>
+                                                    <input type="date" name="eventDate" value="${selectedDate}" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                </div>
+                                                <div>
+                                                    <label id="numPeopleLabel" class="block text-sm font-semibold text-gray-700 mb-2">Number of People (Bride + Bridesmaids) *</label>
+                                                    <input type="number" name="numGirls" value="1" min="1" max="20" oninput="app.updateEstimate()" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                </div>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                                <div>
+                                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Travel Area</label>
+                                                    <select name="travelArea" onchange="app.updateEstimate()" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                        <option value="local">Local: Alpharetta, Roswell, Johns Creek, Cumming - $0</option>
+                                                        <option value="nonlocal">Outside Local Area - $1.35 per mile</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Non-Local Miles (round-trip estimate)</label>
+                                                    <input type="number" name="travelMiles" value="0" min="0" step="1" onchange="app.updateEstimate()" oninput="app.updateEstimate()" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                </div>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                                <div>
+                                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Additional Service Selection</label>
+                                                    <select name="addonsEstimate" onchange="app.updateEstimate()" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                        <option value="0">None - $0</option>
+                                                        <option value="25">False Lashes Application - $25</option>
+                                                        <option value="50">Trial Makeup Appointment - $50</option>
+                                                        <option value="50">Touch-Up Service (1 hr) - $50</option>
+                                                        <option value="100">Wedding Day Coordination - $100</option>
+                                                    </select>
+                                                </div>
+                                                <div></div>
+                                            </div>
+
+                                            <div class="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                                                <p class="text-sm font-semibold text-gray-700">Estimated Booking Total</p>
+                                                <p id="estimatePrice" class="text-3xl font-semibold text-amber-600 mt-1">${this.formatCurrency(initialBreakdown.estimatedTotal)}</p>
+                                                <div class="mt-3 space-y-1 text-sm text-gray-700">
+                                                    <div class="flex items-center justify-between"><span>Service Subtotal</span><span id="estimateServiceSubtotal">${this.formatCurrency(initialBreakdown.serviceSubtotal)}</span></div>
+                                                    <div class="flex items-center justify-between"><span id="estimateDiscountLabel">Group Discount</span><span id="estimateDiscountAmount">${this.formatCurrency(initialBreakdown.discountAmount || 0)}</span></div>
+                                                    <div class="flex items-center justify-between"><span>Travel Base Fee</span><span id="estimateTravelBaseFee">${this.formatCurrency(initialBreakdown.travelBase || 0)}</span></div>
+                                                    <div class="flex items-center justify-between"><span>Mileage Fee</span><span id="estimateTravelMileageFee">${this.formatCurrency(initialBreakdown.travelMileage || 0)}</span></div>
+                                                    <div class="flex items-center justify-between"><span id="estimateTravelLabel">Travel Fee</span><span id="estimateTravelFee">${this.formatCurrency(initialBreakdown.travel)}</span></div>
+                                                    <div class="flex items-center justify-between"><span>Additional Services</span><span id="estimateAddonsFee">${this.formatCurrency(initialBreakdown.addons)}</span></div>
+                                                    <div class="h-px bg-amber-200 my-1"></div>
+                                                    <div class="flex items-center justify-between font-semibold"><span>Estimated Total</span><span id="estimateTotal">${this.formatCurrency(initialBreakdown.estimatedTotal)}</span></div>
+                                                    <div class="flex items-center justify-between"><span>Deposit Due at Booking</span><span id="estimateDepositDueNow">${this.formatCurrency(initialBreakdown.depositDueNow)}</span></div>
+                                                    <div class="flex items-center justify-between"><span>Remaining Balance</span><span id="estimateRemainingBalance">${this.formatCurrency(initialBreakdown.remainingBalance)}</span></div>
+                                                </div>
+                                                <p class="text-xs text-gray-600 mt-2">Estimate may vary depending on travel fees and additional services.</p>
+                                            </div>
+
+                                            <div class="mb-6">
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Makeup Preference</label>
+                                                <select name="makeupPreference" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                    <option value="">Select preference</option>
+                                                    <option value="natural">Natural & Fresh</option>
+                                                    <option value="glam">Glam & Bold</option>
+                                                    <option value="classic">Classic Elegant</option>
+                                                    <option value="modern">Modern Chic</option>
+                                                    <option value="undecided">Need Advice</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Event Details</label>
+                                                <textarea name="eventDetails" placeholder="Tell us about your event, color scheme, venue, any special requests..." class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors resize-none" rows="4"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-8">
+                                            <h3 class="font-serif text-2xl font-bold text-gray-700 mb-6 pb-4 border-b-2 border-gray-50">Your Information</h3>
+
+                                            <div class="mb-6">
+                                                <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                                <input type="text" name="fullName" required placeholder="Enter your full name" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                <div>
+                                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                                                    <input type="email" name="email" required placeholder="your@email.com" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                </div>
+                                                <div>
+                                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                                                    <input type="tel" name="phone" required placeholder="(555) 123-4567" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-amber-600 focus:outline-none transition-colors">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-gray-700">
+                                            <p class="font-semibold text-gray-700 mb-2">Before You Submit</p>
+                                            <ul class="space-y-1 mb-3">
+                                                <li>• $250 non-refundable security deposit is due at booking.</li>
+                                                <li>• Remaining balance is due in full 2 weeks before the wedding date.</li>
+                                            </ul>
+                                            <label class="flex items-start gap-2 cursor-pointer">
+                                                <input type="checkbox" name="policyAccepted" required class="mt-1 h-4 w-4 border-gray-300 rounded">
+                                                <span>I understand and agree to the booking and payment policy.</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="flex flex-col md:flex-row gap-4 justify-end pt-8 border-t-2 border-gray-50">
+                                            <button type="button" onclick="app.navigate('home')" class="px-8 py-3 border-2 border-gray-700 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors">Cancel</button>
+                                            <button type="submit" class="px-8 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors shadow-lg">Submit Booking</button>
+                                        </div>
+
+                                        <p class="text-center text-gray-600 text-sm mt-6">We'll review your request and contact you within 24 hours to confirm availability.</p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    ${this.renderFooter()}
+                `;
+            },
+
+            handleSubmit(event) {
+                event.preventDefault();
+                const form = event.target;
+                const formData = new FormData(form);
+                
+                const data = {
+                    fullName: formData.get('fullName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    eventDate: formData.get('eventDate'),
+                    eventType: formData.get('eventType'),
+                    numGirls: formData.get('numGirls'),
+                    travelArea: formData.get('travelArea'),
+                    travelMiles: formData.get('travelMiles'),
+                    addonsEstimate: formData.get('addonsEstimate'),
+                    makeupPreference: formData.get('makeupPreference'),
+                    eventDetails: formData.get('eventDetails')
+                };
+
+                const estimate = this.calculateEstimateBreakdown(
+                    data.eventType,
+                    data.numGirls,
+                    data.travelArea,
+                    data.travelMiles,
+                    data.addonsEstimate
+                );
+                data.travelFeeEstimate = estimate.travel;
+
+                // Show success message
+                alert(`Thank you, ${data.fullName}!\n\nYour booking request has been submitted.\n\nWe'll contact you at ${data.email} or ${data.phone} within 24 hours to confirm.\n\nEvent Date: ${data.eventDate}`);
+                
+                // Log the data (in production, this would send to a server)
+                console.log('Booking Data:', data);
+
+                // Reset form and navigate home
+                form.reset();
+                this.navigate('home');
+                return false;
+            },
+
+            selectBookingDate(dateString) {
+                this.bookingData = { date: dateString };
+                this.navigate('booking');
+            },
+
+            render() {
+                const root = document.getElementById('root');
+                
+                switch(this.currentPage) {
+                    case 'about':
+                        root.innerHTML = this.renderAbout();
+                        break;
+                    case 'pricing':
+                        root.innerHTML = this.renderPricing();
+                        break;
+                    case 'booking':
+                        root.innerHTML = this.renderBooking();
+                        this.updateEstimate();
+                        break;
+                    default:
+                        root.innerHTML = this.renderHome();
+                }
+            }
+        };
+
+        // Initialize the app
+        app.render();
+    </script>
+</body>
+</html>
